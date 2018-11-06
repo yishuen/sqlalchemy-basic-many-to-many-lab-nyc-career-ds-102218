@@ -3,13 +3,19 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from models import Actor, Role, ActorRole, engine
 
+
+
 Base = declarative_base()
 
-session = sessionmaker()
-session.configure(bind=engine)
-Base.metadata.bind = engine
+engine = create_engine('sqlite:///actorroles.db')
+Session = sessionmaker(bind=engine)
+session = Session()
+#
+# session = sessionmaker()
+# session.configure(bind=engine)
 
-session = session()
+# Base.metadata.bind = engine
+
 
 bale = Actor(name="Christian Bale")
 hathaway = Actor(name="Anne Hathaway")

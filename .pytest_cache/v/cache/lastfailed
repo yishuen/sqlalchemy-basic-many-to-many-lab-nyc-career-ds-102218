@@ -1,0 +1,6 @@
+{
+  "test/index_test.py::TestBasicHasManyThrough::test_actors": true,
+  "test/index_test.py::TestBasicHasManyThrough::test_actors_have_many_roles": true,
+  "test/index_test.py::TestBasicHasManyThrough::test_roles": true,
+  "test/index_test.py::TestBasicHasManyThrough::test_roles_have_many_actors": true
+}
